@@ -1,0 +1,24 @@
+name: ArgenSMP
+version: ${project.version}
+main: ar.argensmp.ArgenSMP
+api-version: '1.21'
+description: Plugin base para un servidor argentino estilo SMP
+commands:
+  mate:
+    description: Cebate un mate y recibí un efecto de velocidad
+    usage: /mate
+  argensmp:
+    description: Administración de ArgenSMP
+    usage: /argensmp reload
+permissions:
+  argensmp.admin:
+    description: Permite recargar el plugin
+    default: op
+  argensmp.rango.pibe:
+    default: true
+  argensmp.rango.crack:
+    default: false
+  argensmp.rango.maestro:
+    default: false
+  argensmp.rango.leyenda:
+    default: false

@@ -1,0 +1,48 @@
+# ArgenSMP - configuración
+# Los textos usan formato MiniMessage: <gold>texto</gold>, <bold>, <gradient:red:blue>, etc.
+
+zona-horaria: "America/Argentina/Buenos_Aires"
+
+bienvenida:
+  titulo: "<gradient:#74acdf:white><bold>ArgenSMP</bold></gradient>"
+  subtitulo: "<yellow>¡Bienvenido, %jugador%, che!"
+  mensaje-global: "<green>+ <white>%jugador% <gray>se sumó al server. ¡Pasá, que está el asado!"
+  mensaje-salida: "<red>- <white>%jugador% <gray>se fue a tomar unos mates."
+  chat:
+    - ""
+    - "<#74acdf><bold>Bienvenido a ArgenSMP</bold>"
+    - "<gray>Usá <yellow>/mate</yellow> para cebarte uno y salir corriendo."
+    - ""
+
+# Orden: del rango más alto al más bajo. Se muestra el primero para el que el jugador tenga el permiso
+# argensmp.rango.<nombre>. Asignalos con LuckPerms (ej: /lp user Nombre permission set argensmp.rango.crack true).
+rangos:
+  leyenda: "<gradient:gold:red><bold>Leyenda</bold></gradient>"
+  maestro: "<light_purple><bold>Maestro</bold>"
+  crack: "<aqua><bold>Crack</bold>"
+  pibe: "<gray>Pibe"
+
+mate:
+  cooldown-segundos: 120
+  duracion-segundos: 30
+  nivel-velocidad: 1
+  mensaje: "<green>🧉 Te cebaste un mate. ¡Ahora sí, a darle!"
+  mensaje-espera: "<red>El agua todavía está caliente, esperá %segundos%s."
+
+scoreboard:
+  activado: true
+  titulo: "<#74acdf><bold>ArgenSMP</bold>"
+  # Placeholders: %jugador%, %online%, %hora% (hora argentina)
+  lineas:
+    - "<gray>Jugador: <white>%jugador%"
+    - "<gray>Online: <white>%online%"
+    - "<gray>Hora AR: <white>%hora%"
+    - " "
+    - "<yellow>tuserver.play.hosting"
+
+# Avisos automáticos a horas fijas (formato 24h, hora de zona-horaria).
+eventos:
+  - hora: "21:00"
+    mensaje: "<gold>⚽ ¡Arranca el evento de fútbol en el spawn! Todos a la cancha."
+  - hora: "22:00"
+    mensaje: "<aqua>🧉 Hora del mate: usá /mate y mandate a farmear."
