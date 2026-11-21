@@ -1,0 +1,28 @@
+name: Compilar ArgenSMP
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bajar el código
+        uses: actions/checkout@v4
+
+      - name: Instalar Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+
+      - name: Compilar con Maven
+        run: mvn -B clean package
+
+      - name: Guardar el plugin compilado
+        uses: actions/upload-artifact@v4
+        with:
+          name: ArgenSMP
+          path: target/ArgenSMP.jar
